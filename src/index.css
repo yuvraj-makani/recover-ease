@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 210 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    /* Healthcare blue - primary color */
+    --primary: 210 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 80% 65%;
+
+    /* Medical green - secondary color */
+    --secondary: 150 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 150 60% 60%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 150 60% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 210 80% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradient colors */
+    --gradient-start: 210 80% 50%;
+    --gradient-mid: 180 70% 48%;
+    --gradient-end: 150 60% 45%;
+
+    /* Shadow and glow effects */
+    --shadow-glow: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow-green: 0 10px 40px -10px hsl(var(--secondary) / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
